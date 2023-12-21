@@ -52,7 +52,7 @@ parser.add_argument('-s', '--save-to-drive', default=True, type=bool, metavar='N
 save_to_drive = parser.parse_args().save_to_drive
 if save_to_drive:
   # Make a directory to save the model in Google Drive
-  os.makedirs('/content/drive/MyDrive/GeoGuessr', exist_ok=True)
+  os.makedirs('/content/drive/MyDrive/GeoGuessr/models', exist_ok=True)
 
 start_time = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
 args = parser.parse_args()
@@ -135,7 +135,7 @@ def train(train_loader, val_loader, model, loss_function, optimizer, epochs, sta
                         }, f'models/{start_time}/model-{epoch}.pth')
                 if save_to_drive:
                   # Save model to Google Drive
-                  shutil.copyfile(f'models/{start_time}/model-{epoch}.pth', f'/content/drive/MyDrive/GeoGuessr/models/{start_time}/model-{epoch}.pth')
+                  shutil.copyfile(f'models/{start_time}/model-{epoch}.pth', f'/content/drive/MyDrive/GeoGuessr/models/model-{epoch}.pth')
                 print('Model saved!')
 
 def main():
