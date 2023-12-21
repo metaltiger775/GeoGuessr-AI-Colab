@@ -1,8 +1,10 @@
-# GeoGuessr AI
+# GeoGuessr AI Colab
+*Credits to [Stelath](https://github.com/Stelath)*
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Stelath/geoguessr-ai/blob/main/notebook/GeoGuessr_AI_Demo.ipynb) ![License](https://img.shields.io/github/license/Stelath/geoguessr-ai)
 
-This project was done personally as an opportunity to learn more about CNN & RNNs by creating a ML Model that could reliably guess a random location in one of five US cities given only a Google Street View image. The idea was inspired by the game GeoGuessr where the user is given a random Google Street View location and have to guess based on the Street View their location in the world.
+This is a repo for running [Stelath](https://github.com/Stelath)'s GeoGuessr AI trainer on Google Colab, for people (like me) who don't have access to powerful GPUs and don't want to pay for them using other online services such as [LambdaLabs](https://lambdalabs.com/service/gpu-cloud), [Azure](https://azure.microsoft.com/), or [Vultr](https://www.vultr.com/).
+
 
 ## How to run (Google Colab)
 
@@ -19,6 +21,7 @@ This project was done personally as an opportunity to learn more about CNN & RNN
 - Run the cell
 - Wait
 - *If you enabled the **save_to_drive** setting, you will find the models in your drive inside the folder **"Geoguessr/models"***
+
 
 # Tutorial
 ### How to get your [Kaggle](https://kaggle.com) API token + username
@@ -54,6 +57,8 @@ python -m main geoguessr_dataset/ -a wide_resnet50_2 -b 16 --lr 0.0001 -j 6 --ch
 
 
 ## Project Overview
+
+This project was done by [Stelath](https://github.com/Stelath) as an opportunity to learn more about CNN & RNNs by creating a ML Model that could reliably guess a random location in one of five US cities given only a Google Street View image. The idea was inspired by the game GeoGuessr where the user is given a random Google Street View location and have to guess based on the Street View their location in the world.
 
 ### Creating a Dataset
 
