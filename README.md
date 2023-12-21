@@ -14,7 +14,7 @@ This is a repo for running [Stelath](https://github.com/Stelath)'s GeoGuessr AI 
 - Open the [Geoguessr_AI_Trainer.ipynb](Geoguessr_AI_Trainer.ipynb) file in Google Colab with a GPU instance
 - Choose between making your own dataset or using the premade dataset:
   - **Using premade dataset** Edit the "*Download dataset*" cell under the "*Setup and Installation*" cell to add your [Kaggle](https://kaggle.com) username & token ([tutorial](#Tutorial))
-  - **Making your own dataset** Edit the settings to your liking and run the cell but **``don't forget to add your Google Street View API key``**
+  - **Making your own dataset** Edit the settings to your liking and run the cell but **don't forget to add your [Google Street View API key](https://developers.google.com/maps/documentation/streetview/overview)**
 - If you want to make your own dataset, [follow these instructions](#Creating-a-Dataset)
 - Run the whole "*Setup and Installation*" cell
 
