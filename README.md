@@ -6,7 +6,7 @@
 This is a repo for running [Stelath](https://github.com/Stelath)'s GeoGuessr AI trainer on Google Colab, for people (like me) who don't have access to powerful GPUs and don't want to pay for them using other online services such as [LambdaLabs](https://lambdalabs.com/service/gpu-cloud), [Azure](https://azure.microsoft.com/), or [Vultr](https://www.vultr.com/).
 
 
-## How to run (Google Colab)
+# How to run (Google Colab)
 
 **!!Make sure you Change runtime type to GPU!!** 
 
