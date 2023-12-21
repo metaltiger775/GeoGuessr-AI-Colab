@@ -5,6 +5,7 @@ from tqdm import tqdm
 import numpy as np
 from datetime import datetime
 
+import time
 import shutil
 from google.colab import drive
 import torch
@@ -51,7 +52,7 @@ parser.add_argument('-s', '--save-to-drive', default=True, type=bool, metavar='N
 save_to_drive = parser.parse_args().save_to_drive
 if save_to_drive:
   # Make a directory to save the model in Google Drive
-  os.makedirs('/content/drive/MyDrive/GeoGuessr_models', exist_ok=True)
+  os.makedirs('/content/drive/MyDrive/GeoGuessr', exist_ok=True)
 
 start_time = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
 args = parser.parse_args()
