@@ -1,7 +1,7 @@
 # GeoGuessr AI Colab
 *Credits to [Stelath](https://github.com/Stelath)*
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Stelath/geoguessr-ai/blob/main/notebook/GeoGuessr_AI_Demo.ipynb) ![License](https://img.shields.io/github/license/Stelath/geoguessr-ai)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/metaltiger775/geoguessr-ai-colab/blob/main/notebook/Geoguessr_AI_Trainer.ipynb) ![License](https://img.shields.io/github/license/Stelath/geoguessr-ai)
 
 This is a repo for running [Stelath](https://github.com/Stelath)'s GeoGuessr AI trainer on Google Colab, for people (like me) who don't have access to powerful GPUs and don't want to pay for them using other online services such as [LambdaLabs](https://lambdalabs.com/service/gpu-cloud), [Azure](https://azure.microsoft.com/), or [Vultr](https://www.vultr.com/).
 
@@ -42,12 +42,12 @@ This is a repo for running [Stelath](https://github.com/Stelath)'s GeoGuessr AI 
 
 ### Run Pretrained Model
 
-In order to run a pretrained model you can download it from Google Drive: [![Open In Drive](https://img.shields.io/badge/Google%20Drive-5383ec?style=flat&logo=googledrive&logoColor=5383ec&label=%E2%80%8B)](https://drive.google.com/file/d/1VJpeLJp6jC8IUfKy6cAtZ9WZcX1TTutW/view?usp=sharing) or you can use the Google Colab: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Stelath/geoguessr-ai/blob/main/notebook/GeoGuessr_AI_Demo.ipynb).
+In order to run a pretrained model you can download it from Google Drive: [![Open In Drive](https://img.shields.io/badge/Google%20Drive-5383ec?style=flat&logo=googledrive&logoColor=5383ec&label=%E2%80%8B)](https://drive.google.com/file/d/1VJpeLJp6jC8IUfKy6cAtZ9WZcX1TTutW/view?usp=sharing) or you can use the Google Colab: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/metaltiger775/geoguessr-ai-colab/blob/main/notebook/Geoguessr_AI_Trainer.ipynb).
 
 ### Train a Model
-You can use the [get_images.py](https://github.com/Stelath/geoguessr-ai/blob/main/get_images.py "get_images.py") script to download a database of images through Google Cloud, they allow 28,500 free Google Street View API calls each month so keep that in mind (anything more and you will be charged $0.007 per image), you will also have to set up a Google Cloud account. You can also download the database of Google Street View images I created [here](https://www.kaggle.com/stelath/city-street-view-dataset).
+You can use the [get_images.py](https://github.com/metaltiger775/geoguessr-ai-colab/blob/main/get_images.py "get_images.py") script to download a database of images through Google Cloud, they allow 28,500 free Google Street View API calls each month so keep that in mind (anything more and you will be charged $0.007 per image), you will also have to set up a Google Cloud account. You can also download the database of Google Street View images I created [here](https://www.kaggle.com/stelath/city-street-view-dataset).
 
-After you have a database of images running the [dataset_builder_multi_label.py](https://github.com/Stelath/geoguessr-ai/blob/main/dataset_builder_multi_label.py) script will preprocess all of the images, then running [main.py](https://github.com/Stelath/geoguessr-ai/blob/main/main.py) will begin training the model.
+After you have a database of images running the [dataset_builder_multi_label.py](https://github.com/metaltiger775/geoguessr-ai-colab/blob/main/dataset_builder_multi_label.py) script will preprocess all of the images, then running [main.py](https://github.com/metaltiger775/geoguessr-ai-colab/blob/main/main.py) will begin training the model.
 
 Here is a set of commands that would be used to train a model on 25,000 images (keep in mind you will need a cities folder containing `.geojson` files from [Open Addresses](https://openaddresses.io/)):
 ```
@@ -63,7 +63,7 @@ This project was done by [Stelath](https://github.com/Stelath) as an opportunity
 
 ### Creating a Dataset
 
-In order to train the model I first had to create a reasonably large dataset of Google Street View images to train it on. To do this I wrote a python script ([get_images.py](https://github.com/Stelath/geoguessr-ai/blob/main/get_images.py "get_images.py")) to download a large set of photographs from 5 cities in the US from Google Street View API. In order to download images from the Google Street View API latitude and longitude coordinates were needed, to solve this I utilized an address book from [Open Addresses](https://openaddresses.io/) to get the latitude and longitude data of random street addresses for each of the 5 cities.
+In order to train the model I first had to create a reasonably large dataset of Google Street View images to train it on. To do this I wrote a python script ([get_images.py](https://github.com/metaltiger775/geoguessr-ai-colab/blob/main/get_images.py "get_images.py")) to download a large set of photographs from 5 cities in the US from Google Street View API. In order to download images from the Google Street View API latitude and longitude coordinates were needed, to solve this I utilized an address book from [Open Addresses](https://openaddresses.io/) to get the latitude and longitude data of random street addresses for each of the 5 cities.
 
 ### Formatting the Images
 
