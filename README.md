@@ -10,7 +10,8 @@ This project was done personally as an opportunity to learn more about CNN & RNN
 
 <ins>Setup:</ins>
 - Open the [Geoguessr_AI_Trainer.ipynb](Geoguessr_AI_Trainer.ipynb) file in Google Colab with a GPU instance
-- (Edit the "*Download dataset*" cell under the "*Setup and Installation*" cell to add your [Kaggle](https://kaggle.com) username & token ([tutorial](#Tutorial))
+- ``*(optional)*`` Edit the "*Download dataset*" cell under the "*Setup and Installation*" cell to add your [Kaggle](https://kaggle.com) username & token ([tutorial](#Tutorial))
+- If you want to make your own dataset, [follow these instructions](###Creating-a-Dataset)
 - Run the whole "*Setup and Installation*" cell
 
 <ins>Training:</ins>
