@@ -5,6 +5,8 @@ from tqdm import tqdm
 import numpy as np
 from datetime import datetime
 
+import shutil
+from google.colab import drive
 import torch
 import torch.nn as nn
 import torch.utils.data
@@ -43,6 +45,13 @@ parser.add_argument('--resume', default='', type=str, metavar='PATH',
                     help='path to latest checkpoint (default: none)')
 parser.add_argument('-e', '--evaluate', dest='evaluate', action='store_true',
                     help='evaluate model on validation set')
+parser.add_argument('-s', '--save-to-drive', default=True, type=bool, metavar='N',
+                    help='save model to Google Drive')
+
+save_to_drive = parser.parse_args().save_to_drive
+if save_to_drive:
+  # Make a directory to save the model in Google Drive
+  os.makedirs('/content/drive/MyDrive/GeoGuessr_models', exist_ok=True)
 
 start_time = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
 args = parser.parse_args()
@@ -123,6 +132,10 @@ def train(train_loader, val_loader, model, loss_function, optimizer, epochs, sta
                         'optimizer_state_dict': optimizer.state_dict(),
                         'loss': loss
                         }, f'models/{start_time}/model-{epoch}.pth')
+                if save_to_drive:
+                  # Save model to Google Drive
+                  shutil.copyfile(f'models/{start_time}/model-{epoch}.pth', f'/content/drive/MyDrive/GeoGuessr/models/{start_time}/model-{epoch}.pth')
+                print('Model saved!')
 
 def main():
     global writer
