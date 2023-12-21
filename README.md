@@ -10,7 +10,7 @@ This project was done personally as an opportunity to learn more about CNN & RNN
 
 <ins>Setup:</ins>
 - Open the [Geoguessr_AI_Trainer.ipynb](Geoguessr_AI_Trainer.ipynb) file in Google Colab with a GPU instance
-- Edit the "*Download dataset*" cell under the "*Setup and Installation*" cell to add your [Kaggle](https://kaggle.com) username & password
+- (Edit the "*Download dataset*" cell under the "*Setup and Installation*" cell to add your [Kaggle](https://kaggle.com) username & token [tutorial](#-Tutorial))
 - Run the whole "*Setup and Installation*" cell
 
 <ins>Training:</ins>
@@ -19,7 +19,21 @@ This project was done personally as an opportunity to learn more about CNN & RNN
 - Wait
 - *If you enabled the **save_to_drive** setting, you will find the models in your drive inside the folder **"Geoguessr/models"***
 
-## Instructions (PC)
+# Tutorial
+### How to get your [Kaggle](https://kaggle.com) API token + username
+
+1. Create an account if you haven't already
+2. Go to your [Settings](https://www.kaggle.com/settings)
+3. Find the **"API"** section
+4. Click on **Create New Token**
+5. It will save a *.json* file to your computer
+6. Open the file in the text editor of your chcoice
+7. Replace the line in the Google Colab Notebook with the content of the json file
+
+
+
+
+## Instructions
 
 ### Run Pretrained Model
 
