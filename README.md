@@ -4,7 +4,22 @@
 
 This project was done personally as an opportunity to learn more about CNN & RNNs by creating a ML Model that could reliably guess a random location in one of five US cities given only a Google Street View image. The idea was inspired by the game GeoGuessr where the user is given a random Google Street View location and have to guess based on the Street View their location in the world.
 
-## Instructions
+## How to run (Google Colab)
+
+**!!Make sure you Change runtime type to GPU!!** 
+
+<ins>Setup:</ins>
+- Open the [Geoguessr_AI_Trainer.ipynb](Geoguessr_AI_Trainer.ipynb) file in Google Colab with a GPU instance
+- Edit the "*Download dataset*" cell under the "*Setup and Installation*" cell to add your [Kaggle](https://kaggle.com) username & password
+- Run the whole "*Setup and Installation*" cell
+
+<ins>Training:</ins>
+- Start by editing the settings to your liking **if you know what you're doing** *(all of the settings you see are the default settings)*
+- Run the cell
+- Wait
+- *If you enabled the **save_to_drive** setting, you will find the models in your drive inside the folder **"Geoguessr/models"***
+
+## Instructions (PC)
 
 ### Run Pretrained Model
 
